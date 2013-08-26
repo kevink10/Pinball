@@ -11,7 +11,8 @@ import org.junit.*
 @TestFor(PlayerController)
 class PlayerControllerTests {
 
-    void testSomething() {
-       fail "Implement me"
+    void testPlayerControllerIsScaffolded() {
+    	PlayerController controller = new PlayerController()
+		assertTrue controller.scaffold
     }
 }
