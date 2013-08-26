@@ -1,7 +1,5 @@
 package com.pinball
 
-
-
 import grails.test.mixin.*
 import org.junit.*
 
@@ -9,20 +7,24 @@ import org.junit.*
 @TestFor(Player)
 class PlayerTests {
 	def testPlayer
+	def validName
+	def validInitials
 	
 	@Before
 	void setUp() {
-		testPlayer = new Player(name: "Player One", initials: "AAA")
+		validName = "Player One"
+		validInitials = "AAA"
+		testPlayer = new Player(name: validName, initials: validInitials)
 	}
 
 	@Test
     void testPlayerHasName() {
-		assertEquals("Player One", testPlayer.name)
+		assertEquals(validName, testPlayer.name)
     }
 	
 	@Test
 	void testPlayersHasInitials() {
-		assertEquals("AAA", testPlayer.initials)
+		assertEquals(validInitials, testPlayer.initials)
 	}
 	
 	@Test
